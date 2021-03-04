@@ -8,6 +8,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Random;
 
@@ -51,6 +52,7 @@ public class levelone extends AppCompatActivity {
         imageViewWorm1.setOnTouchListener( new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event){
+                Toast.makeText(getApplicationContext(), "Worm 1 was Touched", Toast.LENGTH_SHORT).show();
                 return false;
             }
 
@@ -58,6 +60,8 @@ public class levelone extends AppCompatActivity {
         imageViewWorm2.setOnTouchListener( new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event){
+                Toast.makeText(getApplicationContext(), "Worm 2 was Touched", Toast.LENGTH_SHORT).show();
+
                 return false;
             }
 
@@ -65,6 +69,8 @@ public class levelone extends AppCompatActivity {
         imageViewWorm3.setOnTouchListener( new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event){
+                Toast.makeText(getApplicationContext(), "Worm 3 was Touched", Toast.LENGTH_SHORT).show();
+
                 return false;
             }
 
@@ -72,6 +78,8 @@ public class levelone extends AppCompatActivity {
         imageViewWorm4.setOnTouchListener( new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event){
+                Toast.makeText(getApplicationContext(), "Worm 4 was Touched", Toast.LENGTH_SHORT).show();
+
                 return false;
             }
 
@@ -79,6 +87,8 @@ public class levelone extends AppCompatActivity {
         imageViewWorm5.setOnTouchListener( new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event){
+                Toast.makeText(getApplicationContext(), "Worm 5 was Touched", Toast.LENGTH_SHORT).show();
+
                 return false;
             }
 
@@ -86,6 +96,8 @@ public class levelone extends AppCompatActivity {
         imageViewWorm6.setOnTouchListener( new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event){
+                Toast.makeText(getApplicationContext(), "Worm 6 was Touched", Toast.LENGTH_SHORT).show();
+
                 return false;
             }
 
@@ -93,6 +105,8 @@ public class levelone extends AppCompatActivity {
         imageViewWorm7.setOnTouchListener( new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event){
+                Toast.makeText(getApplicationContext(), "Worm 7 was Touched", Toast.LENGTH_SHORT).show();
+
                 return false;
             }
 
@@ -100,6 +114,8 @@ public class levelone extends AppCompatActivity {
         imageViewWorm1.setOnTouchListener( new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event){
+                Toast.makeText(getApplicationContext(), "Worm 8 was Touched", Toast.LENGTH_SHORT).show();
+
                 return false;
             }
 
