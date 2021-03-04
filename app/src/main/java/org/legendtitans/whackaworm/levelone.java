@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -47,6 +48,62 @@ public class levelone extends AppCompatActivity {
         imageViewWorm7.setVisibility(View.INVISIBLE);
         imageViewWorm8.setVisibility(View.INVISIBLE);
 
+        imageViewWorm1.setOnTouchListener( new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event){
+                return false;
+            }
+
+        });
+        imageViewWorm2.setOnTouchListener( new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event){
+                return false;
+            }
+
+        });
+        imageViewWorm3.setOnTouchListener( new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event){
+                return false;
+            }
+
+        });
+        imageViewWorm4.setOnTouchListener( new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event){
+                return false;
+            }
+
+        });
+        imageViewWorm5.setOnTouchListener( new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event){
+                return false;
+            }
+
+        });
+        imageViewWorm6.setOnTouchListener( new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event){
+                return false;
+            }
+
+        });
+        imageViewWorm7.setOnTouchListener( new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event){
+                return false;
+            }
+
+        });
+        imageViewWorm1.setOnTouchListener( new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event){
+                return false;
+            }
+
+        });
 
 
         wormImageViews[0] = imageViewWorm1;
