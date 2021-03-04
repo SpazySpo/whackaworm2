@@ -113,7 +113,7 @@ public class levelone extends AppCompatActivity {
         wormImageViews[4] = imageViewWorm5;
         wormImageViews[5] = imageViewWorm6;
         wormImageViews[6] = imageViewWorm7;
-       // wormImageViews[7] = imageViewWorm8;
+        wormImageViews[7] = imageViewWorm8;
 
 
 
