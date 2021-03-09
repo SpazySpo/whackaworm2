@@ -2,12 +2,14 @@ package org.legendtitans.whackaworm;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Random;
 
@@ -167,7 +169,11 @@ public class levelone extends AppCompatActivity {
 
 
             public void onFinish() {
+                if (score == 10) {
+                    Intent intent = new Intent(getApplicationContext(), leveltwo.class);
+                    startActivity(intent);
 
+                }
                 wormImageViews[randNum].setVisibility(View.INVISIBLE);
                 start();
             }

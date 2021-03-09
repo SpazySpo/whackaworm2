@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Whackaworm">
-        <activity android:name=".levelone"></activity>
+        <activity android:name=".leveltwo"></activity>
+        <activity android:name=".levelone" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
