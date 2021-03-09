@@ -14,6 +14,8 @@ import java.util.Random;
 public class levelone extends AppCompatActivity {
 
     TextView textView;
+    TextView scoreTextView;
+    int score = 0;
     ImageView imageViewWorm1;
     ImageView imageViewWorm2;
     ImageView imageViewWorm3;
@@ -29,6 +31,7 @@ public class levelone extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_levelone);
         textView = findViewById(R.id.textView);
+        scoreTextView = findViewById(R.id.scoreTextView);
         imageViewWorm1 = findViewById(R.id.imageViewWorm1);
         imageViewWorm2 = findViewById(R.id.imageViewWorm2);
         imageViewWorm3 = findViewById(R.id.imageViewWorm3);
@@ -51,6 +54,10 @@ public class levelone extends AppCompatActivity {
         imageViewWorm1.setOnTouchListener( new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event){
+                imageViewWorm1.setVisibility(View.INVISIBLE);
+            score = score + 1;
+            scoreTextView.setText(""+score);
+
                 return false;
             }
 
@@ -58,6 +65,9 @@ public class levelone extends AppCompatActivity {
         imageViewWorm2.setOnTouchListener( new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event){
+                imageViewWorm2.setVisibility(View.INVISIBLE);
+                score = score + 1;
+                scoreTextView.setText(""+score);
                 return false;
             }
 
@@ -65,6 +75,9 @@ public class levelone extends AppCompatActivity {
         imageViewWorm3.setOnTouchListener( new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event){
+                imageViewWorm3.setVisibility(View.INVISIBLE);
+                score = score + 1;
+                scoreTextView.setText(""+score);
                 return false;
             }
 
@@ -72,6 +85,9 @@ public class levelone extends AppCompatActivity {
         imageViewWorm4.setOnTouchListener( new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event){
+                imageViewWorm4.setVisibility(View.INVISIBLE);
+                score = score + 1;
+                scoreTextView.setText(""+score);
                 return false;
             }
 
@@ -79,6 +95,9 @@ public class levelone extends AppCompatActivity {
         imageViewWorm5.setOnTouchListener( new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event){
+                imageViewWorm5.setVisibility(View.INVISIBLE);
+                score = score + 1;
+                scoreTextView.setText(""+score);
                 return false;
             }
 
@@ -86,6 +105,9 @@ public class levelone extends AppCompatActivity {
         imageViewWorm6.setOnTouchListener( new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event){
+                imageViewWorm6.setVisibility(View.INVISIBLE);
+                score = score + 1;
+                scoreTextView.setText(""+score);
                 return false;
             }
 
@@ -93,13 +115,19 @@ public class levelone extends AppCompatActivity {
         imageViewWorm7.setOnTouchListener( new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event){
+                imageViewWorm7.setVisibility(View.INVISIBLE);
+                score = score + 1;
+                scoreTextView.setText(""+score);
                 return false;
             }
 
         });
-        imageViewWorm1.setOnTouchListener( new View.OnTouchListener() {
+        imageViewWorm8.setOnTouchListener( new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event){
+                imageViewWorm8.setVisibility(View.INVISIBLE);
+                score = score + 1;
+                scoreTextView.setText(""+score);
                 return false;
             }
 
