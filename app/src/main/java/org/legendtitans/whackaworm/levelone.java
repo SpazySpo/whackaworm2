@@ -1,4 +1,4 @@
-package org.legendtitans.whackaworm;
+  package org.legendtitans.whackaworm;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -53,88 +53,119 @@ public class levelone extends AppCompatActivity {
         imageViewWorm7.setVisibility(View.INVISIBLE);
         imageViewWorm8.setVisibility(View.INVISIBLE);
 
-        imageViewWorm1.setOnTouchListener( new View.OnTouchListener() {
+        imageViewWorm1.setOnTouchListener(new View.OnTouchListener() {
+
             @Override
-            public boolean onTouch(View v, MotionEvent event){
+            public boolean onTouch(View v, MotionEvent event) {
                 imageViewWorm1.setVisibility(View.INVISIBLE);
-            score = score + 1;
-            scoreTextView.setText(""+score);
+                score = score + 1;
+                scoreTextView.setText(""+score);
+                if (score == 10){
+                    Intent intent = new Intent(getApplicationContext(), leveltwo.class);
+                    startActivity(intent);
+                }
 
                 return false;
             }
-
         });
-        imageViewWorm2.setOnTouchListener( new View.OnTouchListener() {
+        imageViewWorm2.setOnTouchListener(new View.OnTouchListener() {
+
             @Override
-            public boolean onTouch(View v, MotionEvent event){
+            public boolean onTouch(View v, MotionEvent event) {
                 imageViewWorm2.setVisibility(View.INVISIBLE);
                 score = score + 1;
                 scoreTextView.setText(""+score);
+                if (score == 10){
+                    Intent intent = new Intent(getApplicationContext(), leveltwo.class);
+                    startActivity(intent);
+                }
                 return false;
             }
-
         });
-        imageViewWorm3.setOnTouchListener( new View.OnTouchListener() {
+        imageViewWorm3.setOnTouchListener(new View.OnTouchListener() {
+
             @Override
-            public boolean onTouch(View v, MotionEvent event){
+            public boolean onTouch(View v, MotionEvent event) {
                 imageViewWorm3.setVisibility(View.INVISIBLE);
                 score = score + 1;
                 scoreTextView.setText(""+score);
+                if (score == 10){
+                    Intent intent = new Intent(getApplicationContext(), leveltwo.class);
+                    startActivity(intent);
+                }
                 return false;
             }
-
         });
-        imageViewWorm4.setOnTouchListener( new View.OnTouchListener() {
+        imageViewWorm4.setOnTouchListener(new View.OnTouchListener() {
+
             @Override
-            public boolean onTouch(View v, MotionEvent event){
+            public boolean onTouch(View v, MotionEvent event) {
                 imageViewWorm4.setVisibility(View.INVISIBLE);
                 score = score + 1;
                 scoreTextView.setText(""+score);
+                if (score == 10){
+                    Intent intent = new Intent(getApplicationContext(), leveltwo.class);
+                    startActivity(intent);
+                }
                 return false;
             }
-
         });
-        imageViewWorm5.setOnTouchListener( new View.OnTouchListener() {
+        imageViewWorm5.setOnTouchListener(new View.OnTouchListener() {
+
             @Override
-            public boolean onTouch(View v, MotionEvent event){
+            public boolean onTouch(View v, MotionEvent event) {
                 imageViewWorm5.setVisibility(View.INVISIBLE);
                 score = score + 1;
                 scoreTextView.setText(""+score);
+                if (score == 10){
+                    Intent intent = new Intent(getApplicationContext(), leveltwo.class);
+                    startActivity(intent);
+                }
                 return false;
             }
-
         });
-        imageViewWorm6.setOnTouchListener( new View.OnTouchListener() {
+        imageViewWorm6.setOnTouchListener(new View.OnTouchListener() {
+
             @Override
-            public boolean onTouch(View v, MotionEvent event){
+            public boolean onTouch(View v, MotionEvent event) {
                 imageViewWorm6.setVisibility(View.INVISIBLE);
                 score = score + 1;
                 scoreTextView.setText(""+score);
+                if (score == 10){
+                    Intent intent = new Intent(getApplicationContext(), leveltwo.class);
+                    startActivity(intent);
+                }
                 return false;
             }
-
         });
-        imageViewWorm7.setOnTouchListener( new View.OnTouchListener() {
+        imageViewWorm7.setOnTouchListener(new View.OnTouchListener() {
+
             @Override
-            public boolean onTouch(View v, MotionEvent event){
+            public boolean onTouch(View v, MotionEvent event) {
                 imageViewWorm7.setVisibility(View.INVISIBLE);
                 score = score + 1;
                 scoreTextView.setText(""+score);
+                if (score == 10){
+                    Intent intent = new Intent(getApplicationContext(), leveltwo.class);
+                    startActivity(intent);
+                }
                 return false;
             }
-
         });
-        imageViewWorm8.setOnTouchListener( new View.OnTouchListener() {
+        imageViewWorm8.setOnTouchListener(new View.OnTouchListener() {
+
             @Override
-            public boolean onTouch(View v, MotionEvent event){
+            public boolean onTouch(View v, MotionEvent event) {
                 imageViewWorm8.setVisibility(View.INVISIBLE);
                 score = score + 1;
                 scoreTextView.setText(""+score);
+                if (score == 10){
+                    Intent intent = new Intent(getApplicationContext(), leveltwo.class);
+                    startActivity(intent);
+                }
                 return false;
             }
-
         });
-
 
         wormImageViews[0] = imageViewWorm1;
         wormImageViews[1] = imageViewWorm2;
@@ -147,39 +178,52 @@ public class levelone extends AppCompatActivity {
 
 
 
-        new CountDownTimer(50000, 1000) {
-            public void onTick(long millisUntilFinished) {
-                long sec = (millisUntilFinished / 1000) ;
-                textView.setText(sec+"");
-            }
-            // When the task is over it will print 00:00:00 there
-            public void onFinish() {
-                textView.setText("0");
-            }
-        }.start();
+        CountDownTimer wormTimer = new CountDownTimer(3000, 3000) {
 
-        new CountDownTimer(3000, 3000) {
             Random random = new Random();
             int randNum;
 
             public void onTick(long millisUntilFinished) {
+
                 randNum = random.nextInt(8);
+                if(randNum == randNum){
+                    randNum = random.nextInt(8);
+                }
                 wormImageViews[randNum].setVisibility(View.VISIBLE);
             }
 
+            public void onFinish() {
+                wormImageViews[randNum].setVisibility(View.INVISIBLE);
+
+                start();
+
+
+            }
+        }.start();
+
+        CountDownTimer mainTimer = new CountDownTimer(30000, 1000) {
+            public void onTick(long millisUntilFinished) {
+                long sec = millisUntilFinished / 1000;
+                textView.setText(sec+"");
+            }
 
             public void onFinish() {
-                if (score == 10) {
-                    Intent intent = new Intent(getApplicationContext(), leveltwo.class);
-                    startActivity(intent);
-
-                }
-                wormImageViews[randNum].setVisibility(View.INVISIBLE);
-                start();
+                wormTimer.cancel();
+                textView.setText("0");
+                imageViewWorm1.setVisibility(View.INVISIBLE);
+                imageViewWorm2.setVisibility(View.INVISIBLE);
+                imageViewWorm3.setVisibility(View.INVISIBLE);
+                imageViewWorm4.setVisibility(View.INVISIBLE);
+                imageViewWorm5.setVisibility(View.INVISIBLE);
+                imageViewWorm6.setVisibility(View.INVISIBLE);
+                imageViewWorm7.setVisibility(View.INVISIBLE);
+                imageViewWorm8.setVisibility(View.INVISIBLE);
+                Intent intent = new Intent(getApplicationContext(), leveltwo.class);
+                startActivity(intent);
             }
         }.start();
 
 
-    }
 
+    }
 }

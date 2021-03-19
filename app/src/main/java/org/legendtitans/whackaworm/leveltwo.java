@@ -16,8 +16,8 @@ import java.util.Random;
 public class leveltwo extends AppCompatActivity {
 
     TextView textView;
-    TextView scoreTextView;
     int score = 0;
+    TextView scoreTextView;
     ImageView imageViewWorm1;
     ImageView imageViewWorm2;
     ImageView imageViewWorm3;
@@ -27,6 +27,9 @@ public class leveltwo extends AppCompatActivity {
     ImageView imageViewWorm7;
     ImageView imageViewWorm8;
     ImageView[] wormImageViews = new ImageView[8];
+    Boolean oneWorm = false;
+    Boolean threeWorms = false;
+    Boolean fourWorms = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,88 +56,88 @@ public class leveltwo extends AppCompatActivity {
         imageViewWorm7.setVisibility(View.INVISIBLE);
         imageViewWorm8.setVisibility(View.INVISIBLE);
 
-        imageViewWorm1.setOnTouchListener( new View.OnTouchListener() {
+
+        imageViewWorm1.setOnTouchListener(new View.OnTouchListener() {
+
             @Override
-            public boolean onTouch(View v, MotionEvent event){
+            public boolean onTouch(View v, MotionEvent event) {
                 imageViewWorm1.setVisibility(View.INVISIBLE);
                 score = score + 1;
                 scoreTextView.setText(""+score);
 
                 return false;
             }
-
         });
-        imageViewWorm2.setOnTouchListener( new View.OnTouchListener() {
+        imageViewWorm2.setOnTouchListener(new View.OnTouchListener() {
+
             @Override
-            public boolean onTouch(View v, MotionEvent event){
+            public boolean onTouch(View v, MotionEvent event) {
                 imageViewWorm2.setVisibility(View.INVISIBLE);
                 score = score + 1;
                 scoreTextView.setText(""+score);
                 return false;
             }
-
         });
-        imageViewWorm3.setOnTouchListener( new View.OnTouchListener() {
+        imageViewWorm3.setOnTouchListener(new View.OnTouchListener() {
+
             @Override
-            public boolean onTouch(View v, MotionEvent event){
+            public boolean onTouch(View v, MotionEvent event) {
                 imageViewWorm3.setVisibility(View.INVISIBLE);
                 score = score + 1;
                 scoreTextView.setText(""+score);
                 return false;
             }
-
         });
-        imageViewWorm4.setOnTouchListener( new View.OnTouchListener() {
+        imageViewWorm4.setOnTouchListener(new View.OnTouchListener() {
+
             @Override
-            public boolean onTouch(View v, MotionEvent event){
+            public boolean onTouch(View v, MotionEvent event) {
                 imageViewWorm4.setVisibility(View.INVISIBLE);
                 score = score + 1;
                 scoreTextView.setText(""+score);
                 return false;
             }
-
         });
-        imageViewWorm5.setOnTouchListener( new View.OnTouchListener() {
+        imageViewWorm5.setOnTouchListener(new View.OnTouchListener() {
+
             @Override
-            public boolean onTouch(View v, MotionEvent event){
+            public boolean onTouch(View v, MotionEvent event) {
                 imageViewWorm5.setVisibility(View.INVISIBLE);
                 score = score + 1;
                 scoreTextView.setText(""+score);
                 return false;
             }
-
         });
-        imageViewWorm6.setOnTouchListener( new View.OnTouchListener() {
+        imageViewWorm6.setOnTouchListener(new View.OnTouchListener() {
+
             @Override
-            public boolean onTouch(View v, MotionEvent event){
+            public boolean onTouch(View v, MotionEvent event) {
                 imageViewWorm6.setVisibility(View.INVISIBLE);
                 score = score + 1;
                 scoreTextView.setText(""+score);
                 return false;
             }
-
         });
-        imageViewWorm7.setOnTouchListener( new View.OnTouchListener() {
+        imageViewWorm7.setOnTouchListener(new View.OnTouchListener() {
+
             @Override
-            public boolean onTouch(View v, MotionEvent event){
+            public boolean onTouch(View v, MotionEvent event) {
                 imageViewWorm7.setVisibility(View.INVISIBLE);
                 score = score + 1;
                 scoreTextView.setText(""+score);
                 return false;
             }
-
         });
-        imageViewWorm8.setOnTouchListener( new View.OnTouchListener() {
+        imageViewWorm8.setOnTouchListener(new View.OnTouchListener() {
+
             @Override
-            public boolean onTouch(View v, MotionEvent event){
+            public boolean onTouch(View v, MotionEvent event) {
                 imageViewWorm8.setVisibility(View.INVISIBLE);
                 score = score + 1;
                 scoreTextView.setText(""+score);
                 return false;
             }
-
         });
-
 
         wormImageViews[0] = imageViewWorm1;
         wormImageViews[1] = imageViewWorm2;
@@ -147,48 +150,77 @@ public class leveltwo extends AppCompatActivity {
 
 
 
-        new CountDownTimer(50000, 1000) {
-            public void onTick(long millisUntilFinished) {
-                long sec = (millisUntilFinished / 1000) ;
-                textView.setText(sec+"");
-            }
-            // When the task is over it will print 00:00:00 there
-            public void onFinish() {
-                textView.setText("0");
-            }
-        }.start();
 
-        new CountDownTimer(3000, 3000) {
+
+
+
+
+        CountDownTimer fourWormTimer = new CountDownTimer(3000, 3000) {
+
             Random random = new Random();
             int randNum;
             int randNum2;
             int randNum3;
+            int randNum4;
 
             public void onTick(long millisUntilFinished) {
+
                 randNum = random.nextInt(8);
+
+                wormImageViews[randNum2].setVisibility(View.VISIBLE);
                 randNum2 = random.nextInt(8);
+
+                wormImageViews[randNum].setVisibility(View.VISIBLE);
                 randNum3 = random.nextInt(8);
 
 
-                wormImageViews[randNum].setVisibility(View.VISIBLE);
-                wormImageViews[randNum2].setVisibility(View.VISIBLE);
                 wormImageViews[randNum3].setVisibility(View.VISIBLE);
+                randNum4 = random.nextInt(8);
 
+
+                wormImageViews[randNum4].setVisibility(View.VISIBLE);
             }
 
-
             public void onFinish() {
-
-                wormImageViews[randNum].setVisibility(View.INVISIBLE);
-                wormImageViews[randNum2].setVisibility(View.INVISIBLE);
-
-                wormImageViews[randNum3].setVisibility(View.INVISIBLE);
+                wormImageViews[0].setVisibility(View.INVISIBLE);
+                wormImageViews[1].setVisibility(View.INVISIBLE);
+                wormImageViews[2].setVisibility(View.INVISIBLE);
+                wormImageViews[3].setVisibility(View.INVISIBLE);
+                wormImageViews[4].setVisibility(View.INVISIBLE);
+                wormImageViews[5].setVisibility(View.INVISIBLE);
+                wormImageViews[6].setVisibility(View.INVISIBLE);
+                wormImageViews[7].setVisibility(View.INVISIBLE);
 
                 start();
+
+
             }
         }.start();
 
 
-    }
+        CountDownTimer mainTimer = new CountDownTimer(30000, 1000) {
+            public void onTick(long millisUntilFinished) {
+                long sec = millisUntilFinished / 1000;
+                textView.setText(sec+"");
+            }
 
+            public void onFinish() {
+
+                textView.setText("0");
+                imageViewWorm1.setVisibility(View.INVISIBLE);
+                imageViewWorm2.setVisibility(View.INVISIBLE);
+                imageViewWorm3.setVisibility(View.INVISIBLE);
+                imageViewWorm4.setVisibility(View.INVISIBLE);
+                imageViewWorm5.setVisibility(View.INVISIBLE);
+                imageViewWorm6.setVisibility(View.INVISIBLE);
+                imageViewWorm7.setVisibility(View.INVISIBLE);
+                imageViewWorm8.setVisibility(View.INVISIBLE);
+                Intent intent = new Intent(getApplicationContext(), leveltwo.class);
+                startActivity(intent);
+            }
+        }.start();
+
+
+
+    }
 }
